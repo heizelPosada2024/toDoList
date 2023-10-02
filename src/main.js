@@ -26,6 +26,7 @@ taskForm.addEventListener("submit", function (e) {
     taskForm.reset();
 });
 
+//New Project
 class Todo {
     constructor({
         title,
