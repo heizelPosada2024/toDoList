@@ -33,6 +33,7 @@ class Todo {
         state,
         details,
         time,
+        date,
         importance = [],
     }) {
         this.condition = condition;
@@ -40,6 +41,7 @@ class Todo {
         this.state = state;
         this.details = details;
         this.time = time;
+        this.date = date;
         this.importance = importance;
     }
 };
@@ -68,24 +70,24 @@ function addtask(event) {
 
 
     const Task = new Todo({
-        name: name,
+        title: title,
         state: state,
         details: details,
         time: time,
+        date: date,
         importance: importance
     });
 
 
-    const card = document.createElement("div");
-    card.classList.add("card");
-    const moduleNamesWithClasses = modules.map(module => `<br> - ${module.moduleName} (${module.classes} clases) `).join(", ");
-    card.innerHTML = `
-        <h3>${students.name} ${students.lastName}</h3>
-        <p>Username: ${students.userName}</p>
-        <p>Age: ${students.age}</p>
-        <p>Módulos seleccionados: ${moduleNamesWithClasses}</p>
-        <p>Condiciones: ${students.condition}</p>
-        
+    const list = document.createElement("div");
+    list.classList.add("list");
+    list.innerHTML = `
+        <h3>${Task.title}</h3>
+        <p>Importancia: ${Task.importance}</p>
+        <p>Condición: ${Task.condition}</p>
+        <p>Detalles: ${Task.details}</p>
+        <p>Tiempo para hacerla: ${Task.time}</p>
+        <p>Fecha de entrega: ${Task.date}</p>
     `;
 
     document.getElementById("studentList").appendChild(card);
