@@ -27,6 +27,14 @@ taskForm.addEventListener("submit", function (e) {
 });
 
 //New Project
+
+const title = document.getElementById("task-title").value;
+const state = document.getElementById("task-state").value;
+const details = document.getElementById("task-details").value;
+const time = document.getElementById("task-time").value;
+const date = document.getElementById("task-date").value;
+const importance = document.getElementById("task-importance").value;
+
 class Todo {
     constructor({
         title,

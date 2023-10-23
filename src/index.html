@@ -1,3 +1,4 @@
+<!--Comentario-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +14,7 @@
     <div class="container mx-auto p-4">
         <h1 class="text-6xl mb-8 text-center">To Do List</h1>
 
+        <!--
         <form id="taskForm" class="mb-4">
             <div>
             <label for="title">Titulo:</label>
@@ -37,6 +39,7 @@
     
             <button type="submit">Agregar Tarea</button>
         </form>
+        -->
     
         <div id="studentList"></div>
         
@@ -51,9 +54,36 @@
             </div>
 
             <div class="mb-2">
+                <input type="text" id="task-state" placeholder="Task State" required
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-2">
+                <input type="text" id="task-details" placeholder="Task details" required
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
+            </div>
+            
+            <div class="mb-2">
+                <input type="text" id="task-time" placeholder="Task Time" required
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
+            </div>
+
+            
+            <div class="mb-2">
+                <input type="text" id="task-date" placeholder="Task Date" required
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-2">
                 <textarea id="task-description" placeholder="Task description"
                     class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"></textarea>
             </div>
+
+            <div class="mb-2">
+                <textarea id="task-importance" placeholder="Task Importance"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+
             <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Add
                 Task</button>
         </form>
