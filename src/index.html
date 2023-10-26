@@ -14,8 +14,8 @@
     <div class="container mx-auto p-4">
         <h1 class="text-6xl mb-8 text-center">To Do List</h1>
 
-        <!--
-        <form id="taskForm" class="mb-4">
+        
+     
             <div>
             <label for="title">Titulo:</label>
             <input type="text" id="title" required><br>
@@ -27,66 +27,23 @@
             <label for="details">Detalles:</label>
             <input type="text" id="details" required><br>
             <br>
+            <input id="date" type="date">
+            <br>
             <label for="time">Tiempo:</label>
             <input type="text" id="time" required><br>
             <br>
             <label for="importance">Importancia:</label>
-            <select multiple id="module" required>
+            <select multiple id="module" required> 
                 <option value="Importante">Importante</option>
                 <option value="MedioImportante">Medio Importante</option>
                 <option value="NoImportante">No Importante</option>
             </select><br>
     
-            <button type="submit">Agregar Tarea</button>
-        </form>
-        -->
+            <button onclick="addtask()" type="submit">Agregar Tarea</button>
+        
     
         <div id="studentList"></div>
-        
-    </body>
-    </html>
     
-    
-        <form id="task-form" class="mb-4">
-            <div class="mb-2">
-                <input type="text" id="task-title" placeholder="Task title" required
-                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
-            </div>
-
-            <div class="mb-2">
-                <input type="text" id="task-state" placeholder="Task State" required
-                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
-            </div>
-
-            <div class="mb-2">
-                <input type="text" id="task-details" placeholder="Task details" required
-                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
-            </div>
-            
-            <div class="mb-2">
-                <input type="text" id="task-time" placeholder="Task Time" required
-                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
-            </div>
-
-            
-            <div class="mb-2">
-                <input type="text" id="task-date" placeholder="Task Date" required
-                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
-            </div>
-
-            <div class="mb-2">
-                <textarea id="task-description" placeholder="Task description"
-                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"></textarea>
-            </div>
-
-            <div class="mb-2">
-                <textarea id="task-importance" placeholder="Task Importance"
-                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"></textarea>
-            </div>
-
-            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Add
-                Task</button>
-        </form>
         <ul id="task-list" class="space-y-4"></ul>
     </div>
     <script src="main.js"></script>
