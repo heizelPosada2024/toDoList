@@ -1,4 +1,3 @@
-
 //New Project
 
 class Todo {
@@ -25,7 +24,7 @@ Todos.map(function (toDo) {
   
     const list = document.createElement("div");
     list.classList.add("list");
-    list.setAttribute("class","coler ")
+    list.setAttribute("class","color-red ")
     list.innerHTML = `
         <h3>${toDo.title}</h3>
         <p>Importancia: ${toDo.importance}</p>
@@ -36,17 +35,7 @@ Todos.map(function (toDo) {
     `;
 
     document.getElementById("studentList").appendChild(list);
-
-
-
-
-
 });
-
-
-
-
-
 
 // Función para agregar tarea
 function addtask() {

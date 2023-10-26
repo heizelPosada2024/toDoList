@@ -13,9 +13,7 @@
 <body class="bg-black bg-opacity-50">
     <div class="container mx-auto p-4">
         <h1 class="text-6xl mb-8 text-center">To Do List</h1>
-
-        
-     
+   
             <div>
             <label for="title">Titulo:</label>
             <input type="text" id="title" required><br>
@@ -38,10 +36,10 @@
                 <option value="MedioImportante">Medio Importante</option>
                 <option value="NoImportante">No Importante</option>
             </select><br>
+            <br><br>
     
-            <button onclick="addtask()" type="submit">Agregar Tarea</button>
-        
-    
+            <button class="btn success" onclick="addtask()" type="submit">Agregar Tarea</button>
+         
         <div id="studentList"></div>
     
         <ul id="task-list" class="space-y-4"></ul>
