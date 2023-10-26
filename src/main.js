@@ -54,6 +54,10 @@ class Todo {
     }
 };
 
+let Todo = JSON.parse(localStorage.getItem('todo')) || [];
+    Todo.push(newtodo);
+    localStorage.setItem('todo', JSON.stringify(todo));
+
 // Agregar el evento submit al formulario
 document.getElementById("Todo").addEventListener("submit", addtask);
 
