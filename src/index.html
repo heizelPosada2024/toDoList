@@ -10,35 +10,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-black bg-opacity-50">
-    <div class="container mx-auto p-4">
-        <h1 class="text-6xl mb-8 text-center">To Do List</h1>
-   
-            <div>
+<body class="bg-pink-500 bg-opacity-50">
+    <div class="bg-purple-300 h-24">
+        <br>
+        <h1 class="text-6xl text-white text-center">To Do List</h1>
+        <br><br><br>
+    <div>
+
+        <div class="text-center">
             <label for="title">Titulo:</label>
-            <input type="text" id="title" required><br>
-            </div>
+            <input class=" border-black border-2 rounded-xl" type="text" id="title" required><br>
             <br>
             <label for="state">Estado: </label>
-            <input type="text" id="state" required><br>
+            <input class=" border-black border-2 rounded-xl" type="text" id="state" required><br>
             <br>
             <label for="details">Detalles:</label>
-            <input type="text" id="details" required><br>
+            <input class=" border-black border-2 rounded-xl" type="text" id="details" required><br>
             <br>
-            <input id="date" type="date">
-            <br>
-            <label for="time">Tiempo:</label>
-            <input type="text" id="time" required><br>
-            <br>
+            <label for="date">Fecha de entrega:</label>
+            <input  class=" border-black border-2 rounded-xl"id="date" type="date">
+            <br><br>
             <label for="importance">Importancia:</label>
-            <select multiple id="module" required> 
+            <select class="border-black border-2 rounded-xl p-2 " multiple id="module" required> 
                 <option value="Importante">Importante</option>
                 <option value="MedioImportante">Medio Importante</option>
                 <option value="NoImportante">No Importante</option>
             </select><br>
             <br><br>
+        </div>
     
-            <button class="btn success" onclick="addtask()" type="submit">Agregar Tarea</button>
+        <div class=" text-2xl text-center bg-emerald-500 h-12 w-50 m-20 border-black border-4 rounded-xl">
+            <button class="" onclick="addtask()" type="submit">Agregar Tarea</button>
+        </div>
          
         <div id="studentList"></div>
     

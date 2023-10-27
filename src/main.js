@@ -24,18 +24,25 @@ Todos.map(function (toDo) {
   
     const list = document.createElement("div");
     list.classList.add("list");
-    list.setAttribute("class","color-red ")
+    list.setAttribute("class","text-xl font-serif text-center")
     list.innerHTML = `
-        <h3>${toDo.title}</h3>
-        <p>Importancia: ${toDo.importance}</p>
-        <p>Condición: ${toDo.condition}</p>
+        <br>
+        <h3>Titulo: ${toDo.title}</h3>
+        <p>Estado: ${toDo.state}</p>
         <p>Detalles: ${toDo.details}</p>
-        <p>Tiempo para hacerla: ${toDo.time}</p>
-        <p>Fecha de creació: ${toDo.date}</p>
+        <p>Fecha de entrega: ${toDo.date}</p>
+        <p>Importancia: ${toDo.importance}</p>
+        <br>
+
     `;
 
     document.getElementById("studentList").appendChild(list);
+    list.appendChild(addComplete());
+
+    document.getElementById("studentList").appendChild(list);
+    list.appendChild(addDelete());
 });
+
 
 // Función para agregar tarea
 function addtask() {
@@ -45,8 +52,7 @@ function addtask() {
     const name = document.getElementById("title").value;
     const state = document.getElementById("state").value;
     const details = document.getElementById("details").value;
-    const time = document.getElementById("time").value;
-     const date = document.getElementById("date").valueAsDate.toDateString();
+    const date = document.getElementById("date").valueAsDate.toDateString();
 
     console.log(date);
 
@@ -56,7 +62,6 @@ function addtask() {
         state: state,
         details: details,
         date: date,
-        time: new Date(),
     });
 
     console.log(Task);
@@ -64,4 +69,28 @@ function addtask() {
     Todos.push(Task);
     localStorage.setItem('todo', JSON.stringify(Todos));
     location.reload();
+}
+
+function addComplete() {
+    const addComplete = document.createElement('button');
+
+    addComplete.textContent = "Completar"
+
+    addComplete.addEventListener('click', (e) => {
+        const item = e.target.parentElement;
+        list.removeChild(item);
+    })
+    return addComplete;
+}
+
+function addDelete() {
+    const addDelete = document.createElement('button');
+
+    addDelete.textContent = "X"
+
+    addDelete.addEventListener('click', (e) => {
+        const item = e.target.parentElement;
+        list.removeChild(item);
+    })
+    return addDelete;
 }
