@@ -33,7 +33,11 @@ Todos.map(function (toDo) {
         <p>Fecha de entrega: ${toDo.date}</p>
         <p>Importancia: ${toDo.importance}</p>
         <br>
+        <buttom onclick="completeTask()" type="submit"> Completar <buttom/>
+        <buttom> Eliminar <buttom/>
 
+          <div class=" text-2xl text-center">
+                <button onclick="completeTask()">Completar</button>
     `;
 
     document.getElementById("studentList").appendChild(list);
@@ -43,6 +47,22 @@ Todos.map(function (toDo) {
     list.appendChild(addDelete());
 });
 
+//Función para completar la tarea
+function completeTask() {
+
+    list.setAttribute("class","text-xl font-serif text-center text-green-500")
+    
+    completeTask.addEventListener('click', (e) => {
+        const item = e.target.parentElement;
+        list.removeChild(item);
+    })
+    return completeTask;
+}
+
+//Función para eliminar la tarea 
+function deleteTask(){
+
+}
 
 // Función para agregar tarea
 function addtask() {
@@ -70,6 +90,8 @@ function addtask() {
     localStorage.setItem('todo', JSON.stringify(Todos));
     location.reload();
 }
+
+
 
 function addComplete() {
     const addComplete = document.createElement('button');
