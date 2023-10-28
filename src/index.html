@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dist/output.css">
-    <title>Todo list</title>
+    <title>To-do list</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -31,11 +31,7 @@
             <input  class=" border-black border-2 rounded-xl"id="date" type="date">
             <br><br>
             <label for="importance">Importancia:</label>
-            <select class="border-black border-2 rounded-xl p-2 " multiple id="module" required> 
-                <option value="Importante">Importante</option>
-                <option value="MedioImportante">Medio Importante</option>
-                <option value="NoImportante">No Importante</option>
-            </select><br>
+            <input  class=" border-black border-2 rounded-xl"id="importance" type="importance">
             <br><br>
         </div>
     
@@ -47,9 +43,13 @@
     
         <ul id="task-list" class="space-y-4"></ul>
 
+        <ul id="task-list" class="space-y-4">
+            <li class="list">
+                </div>
+            </li>
+        </ul>
     </div>
+    
     <script src="main.js"></script>
 </body>
-
-
 </html>
